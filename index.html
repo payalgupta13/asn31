@@ -32,16 +32,29 @@
 </head>
 <body>
     <img src="img1.jpeg" id="main-product-image"/>
+
     <div class="product-images-container">
-        <img src="moto.jpg" class="product-image">
-        <img src="oppo.jpg" class="product-image">
-        <img src="vivo.png" class="product-image">
-        <img src="realme.webp" class="product-image">
-        <img src="realme.webp" class="product-image">
+        <img src="moto.jpg" class="product-image" onclick="changeImage(1)">
+        <img src="oppo.jpg" class="product-image" onclick="changeImage(2)">
+        <img src="vivo.png" class="product-image" onclick="changeImage(3)">
+        <img src="realme.webp" class="product-image" onclick="changeImage(4)">
+        
     </div>
 
     <script>
-        
+        function changeImage(num){
+            const mainImage = document.getElementById('main-product-image');
+
+            if(num==1){
+                mainImage.src = "moto.jpg";
+            }else if(num==2){
+                mainImage.src="oppo.jpg";
+            }else if(num==3){
+                mainImage.src="vivo.png";
+            }else if(num==4){
+                mainImage.src="realme.webp";
+            }
+        }
     </script>
 </body>
 </html>
